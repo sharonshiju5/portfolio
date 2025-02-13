@@ -1,12 +1,15 @@
-import { useState } from 'react'
-
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import './App.css'
-
+import pro from "./assets/IMG_5035[1]-compressed.jpg"
 function App() {
-  const [count, setCount] = useState(0)
+  const textRef = useRef(null);
+
 
   return (
-    <>
+    <><div className="noise-overlay">
+      
+    </div>
        {/* navigation */}
        {/* navigation */}
        {/* navigation */}
@@ -17,22 +20,32 @@ function App() {
       <nav>
         <div className="nav-container">
           <div className="nav-icons">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "24px", height: "24px" }} ><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <a href="#home">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "20px", height: "20px" }} ><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </a>
           </div>
           <div className="nav-icons">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24" height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(255, 255, 255)"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  style={{ width: "24px", height: "24px" }} ><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <a href="#projects">
+              <svg  xmlns="http://www.w3.org/2000/svg"  width="20" height="20"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(255, 255, 255)"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  style={{ width: "20px", height: "20px" }} ><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </a>
           </div>
           <div className="nav-icons">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24" height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(255, 255, 255)"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  style={{ width: "24px", height: "24px" }} ><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            <a href="#footer">
+              <svg  xmlns="http://www.w3.org/2000/svg"  width="20" height="20"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(255, 255, 255)"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  style={{ width: "20px", height: "20px" }} ><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </a>
           </div>
-          <div className="nav-icons">
+          {/* <div className="nav-icons">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24" height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(255, 255, 255)"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  style={{ width: "24px", height: "24px" }}><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div> */}
+          <div className="nav-icons">
+            <a href="#thought">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(255, 255, 255)"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  style={{ width: "24px", height: "24px" }}><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </a>
           </div>
           <div className="nav-icons">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24"  fill="none"  stroke="rgb(255, 255, 255)"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  style={{ width: "24px", height: "24px" }}><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-          </div>
-          <div className="nav-icons">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "24px", height: "24px" }}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline><p></p> </svg>
+            <a href="#contact">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "24px", height: "24px" }}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline><p></p> </svg>
+            </a>
           </div>
         </div>
       </nav>
@@ -41,21 +54,27 @@ function App() {
       {/* main part */}
       {/* main part */}
       {/* main part */}
-
     <main>
       <div className="main-container">
         <div className="fixed">
+          <motion.div initial={{ opacity: 0, x: 150 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
           <div className="profile-div">
             <div className="profile-section">
-              <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="" />
+
+              <img src={pro} alt="" />
+              {/* <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="" /> */}
             </div>
             <div className="profile-section" style={{height:"30%"}}>
+            {/* <motion.h1 initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ type: "spring", stiffness: 100 }}> */}
               <p className='profile-name'>Sharon Shiju</p>
+            {/* </motion.h1> */}
+
               <p style={{width:"100%", textAlign:"center"}}>mern stack developer</p><br/>
               <p>india,kerala</p>
               <div className="profile-icon-div">
                   <div className="profile-icons">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "100%", height: "100%" }}><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg>
+                    <img src="https://cdn-icons-png.flaticon.com/128/733/733609.png" alt="" />
+                      {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "100%", height: "100%" }}><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg> */}
                   </div>
                   <div className="profile-icons">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "100%", height: "100%" }}><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
@@ -69,17 +88,23 @@ function App() {
               </div>
             </div>
             <div className="profile-section" style={{height:"10%"}}>
+                <a href="#contact" style={{width:"100%"}}>
                 <button>lets talk</button>
+                </a>
             </div>
           </div>
+            </motion.div>
         </div>
-        <div className="scroll">
+        <div className="scroll delay-600">
           <div className="scrool-info">
-            <div className="title-container">
-              <h1 className='title'>MERN STACK</h1>
+            <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
+            <div className="title-container home">
+              <h1 className='title'  id='home'>MERN STACK</h1>
               <h1 className='title overlay'>DEVELOPER</h1>
               <p>Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into beautifully crafted products.</p>
             </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
             <div className="main-tools">
               <div className="div">
                 <div className="stack-div">
@@ -103,15 +128,19 @@ function App() {
                 </svg>
               </div>                
             </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
             <div className="title-container" style={{marginTop:"70px"}}>
-              <h1 className='title'>RECENT</h1>
+              <h1 className='title ' id='projects'>RECENT</h1>
               <h1 className='title overlay' style={{left:"16%"}}>PROJECTS</h1>
             </div>
-            <div className="projects-div">
-              <div className="project-section">
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
+            <div className="projects-div" >
+              <div className="project-section" >
                 <div className="projects">
                   <div className="project-img">
-                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="" />
+                    <img src="https://img.freepik.com/free-photo/project-management-planning-development-message-box-notification-graphic_53876-123902.jpg?t=st=1739350068~exp=1739353668~hmac=4cb46d19698569abd104a66ab7512ef66cf6c4977c71fa04b2ce4d35d5737ba3&w=996" alt="" />
                   </div>
                   <div className="project-name">
                     <h3>E-comerce</h3>
@@ -119,7 +148,7 @@ function App() {
                 </div>
                 <div className="projects">
                   <div className="project-img">
-                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="" />
+                    <img src="https://img.freepik.com/free-photo/project-management-planning-development-message-box-notification-graphic_53876-123902.jpg?t=st=1739350068~exp=1739353668~hmac=4cb46d19698569abd104a66ab7512ef66cf6c4977c71fa04b2ce4d35d5737ba3&w=996" alt="" />
                   </div>
                   <div className="project-name">
                     <h3>Chat application</h3>
@@ -127,14 +156,15 @@ function App() {
                 </div>
                 <div className="projects">
                   <div className="project-img">
-                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="" />
+                    <img src="https://img.freepik.com/free-photo/project-management-planning-development-message-box-notification-graphic_53876-123902.jpg?t=st=1739350068~exp=1739353668~hmac=4cb46d19698569abd104a66ab7512ef66cf6c4977c71fa04b2ce4d35d5737ba3&w=996" alt="" />
                   </div>
                   <div className="project-name">
-                    <h3>Chat application</h3>
+                    <h3>api tester</h3>
                   </div>
-                </div><div className="projects">
+                </div>
+                <div className="projects">
                   <div className="project-img">
-                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="" />
+                    <img src="https://img.freepik.com/free-photo/project-management-planning-development-message-box-notification-graphic_53876-123902.jpg?t=st=1739350068~exp=1739353668~hmac=4cb46d19698569abd104a66ab7512ef66cf6c4977c71fa04b2ce4d35d5737ba3&w=996" alt="" />
                   </div>
                   <div className="project-name">
                     <h3>Chat application</h3>
@@ -142,11 +172,16 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="title-container" style={{marginTop:"420px"}}>
-              <h1 className='title'>DESIGN</h1>
-              <h1 className='title overlay' style={{left:"18.6%"}}>THOUGHTS</h1>
-            </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, skewX: 15 }} whileInView={{ opacity: 1, skewX: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
             <div className="thoughts-div">
+              <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
+              <div className="title-container thought-container" style={{marginTop:"420px"}}>
+                <h1 className='title' id='thought'>DESIGN</h1>
+                <h1 className='title overlay' style={{left:"18.6%"}}>THOUGHTS</h1>
+              </div>
+              </motion.div>
+            
               <div className="thought">
                 <h2>Starting and Growing a Career in Web Design</h2>
                 <p>As the internet continues to develop and grow exponentially, jobs related to the industry do too, particularly those that relate to web design and development.</p>
@@ -155,23 +190,26 @@ function App() {
                 <h2>Create a Landing Page That Performs Great</h2>
                 <p>Whether you work in marketing, sales, or product design, you understand the importance of a quality landing page. Landing pages are standalone websites used to generate leads or sales—in other words they help you increase your revenue.</p>
               </div>
-              <div className="thought">
+              <div className="thought" >
                 <h2>How Can Designers Prepare for the Future?</h2>
                 <p>Whether you work in marketing, sales, or product design, you understand the importance of a quality landing page. Landing pages are standalone websites used to generate leads or sales—in other words they help you increase your revenue.</p>
               </div>
             </div>
-            <div className="title-container" style={{marginTop:"130px"}}>
-              <h1 className='title'>Top-Tier</h1>
-              <h1 className='title overlay' style={{left:"10%"}}>Tools</h1>
-            </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
             <div className="tool-div">
+            <motion.div initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
+              <div className="title-container tool-container" style={{marginTop:"420px"}}>
+                <h1 className='title' id='footer'>Top-Tier</h1>
+                <h1 className='title overlay' style={{left:"10%"}}>Tools</h1>
+              </div>
+              </motion.div>
               <div className="tool">
                 <div className="tool-icon">
                   <img src="https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000" alt="" />
                 </div>
                 <div className="tool-name">
                   <h1>tailwind css</h1>
-                  <h5>css frame work</h5>
                 </div>
               </div>
               <div className="tool">
@@ -180,16 +218,14 @@ function App() {
                 </div> 
                   <div className="tool-name">
                     <h1>bootstrap</h1>
-                    <h5></h5>
                   </div>
               </div>
 
               <div className="tool">
                 <div className="tool-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="css-pgi4ag"><path fill-rule="evenodd" clip-rule="evenodd" fill="#0073E6" d="M24 5.601V1.592a.344.344 0 0 0-.514-.298l-2.64 1.508a.688.688 0 0 0-.346.597v4.009c0 .264.285.43.514.298l2.64-1.508A.688.688 0 0 0 24 5.6ZM.515 1.295l7.643 4.383a.688.688 0 0 0 .684 0l7.643-4.383a.344.344 0 0 1 .515.298v12.03c0 .235-.12.453-.319.58l-4.65 2.953 3.11 1.832c.22.13.495.127.713-.009l4.61-2.878a.344.344 0 0 0 .161-.292v-4.085c0-.254.14-.486.362-.606l2.507-1.346a.344.344 0 0 1 .506.303v7.531c0 .244-.13.47-.34.593l-7.834 4.592a.688.688 0 0 1-.71-.009l-5.953-3.681A.344.344 0 0 1 9 18.808v-3.624c0-.115.057-.222.153-.286l4.04-2.694a.688.688 0 0 0 .307-.572v-4.39a.137.137 0 0 0-.208-.117l-4.44 2.664a.688.688 0 0 1-.705.002L3.645 7.123a.138.138 0 0 0-.208.118v7.933a.344.344 0 0 1-.52.295L.5 14.019C.19 13.833 0 13.497 0 13.135V1.593c0-.264.286-.43.515-.298Z"></path></svg>                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" className="css-pgi4ag"><path fill-rule="evenodd" clip-rule="evenodd" fill="#0073E6" d="M24 5.601V1.592a.344.344 0 0 0-.514-.298l-2.64 1.508a.688.688 0 0 0-.346.597v4.009c0 .264.285.43.514.298l2.64-1.508A.688.688 0 0 0 24 5.6ZM.515 1.295l7.643 4.383a.688.688 0 0 0 .684 0l7.643-4.383a.344.344 0 0 1 .515.298v12.03c0 .235-.12.453-.319.58l-4.65 2.953 3.11 1.832c.22.13.495.127.713-.009l4.61-2.878a.344.344 0 0 0 .161-.292v-4.085c0-.254.14-.486.362-.606l2.507-1.346a.344.344 0 0 1 .506.303v7.531c0 .244-.13.47-.34.593l-7.834 4.592a.688.688 0 0 1-.71-.009l-5.953-3.681A.344.344 0 0 1 9 18.808v-3.624c0-.115.057-.222.153-.286l4.04-2.694a.688.688 0 0 0 .307-.572v-4.39a.137.137 0 0 0-.208-.117l-4.44 2.664a.688.688 0 0 1-.705.002L3.645 7.123a.138.138 0 0 0-.208.118v7.933a.344.344 0 0 1-.52.295L.5 14.019C.19 13.833 0 13.497 0 13.135V1.593c0-.264.286-.43.515-.298Z"></path></svg>                </div>
                 <div className="tool-name">
                   <h1>meterial ui</h1>
-                  <h5>react library</h5>
                 </div>
               </div>
               <div className="tool">
@@ -198,7 +234,6 @@ function App() {
                 </div>
                 <div className="tool-name">
                   <h1>AWS</h1>
-                  <h5>server</h5>
                 </div>
               </div>
 
@@ -208,7 +243,6 @@ function App() {
                 </div>
                 <div className="tool-name">
                   <h1>git</h1>
-                  <h5>version control</h5>
                 </div>
               </div>
 
@@ -217,7 +251,6 @@ function App() {
                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="react"> <path fill="#53C1DE" d="M12,9.852c-1.186,0-2.147,0.961-2.147,2.147c0,1.185,0.961,2.146,2.147,2.146c1.186,0,2.147-0.961,2.147-2.146C14.147,10.812,13.186,9.852,12,9.852L12,9.852z"></path> <path fill="#53C1DE" d="M4.514,15.801c0.211,0.069,0.422,0.141,0.638,0.201c-0.07,0.281-0.131,0.559-0.188,0.845c-0.491,2.602-0.108,4.663,1.12,5.371c1.266,0.731,3.395-0.019,5.467-1.833c0.163-0.145,0.328-0.295,0.491-0.455c0.206,0.202,0.422,0.395,0.637,0.581c2.006,1.724,3.989,2.423,5.213,1.716c1.266-0.73,1.678-2.947,1.144-5.647c-0.042-0.206-0.089-0.417-0.141-0.633c0.15-0.042,0.295-0.089,0.441-0.135C22.041,14.916,24,13.467,24,11.98c0-1.42-1.847-2.798-4.397-3.675V8.305c-0.253-0.084-0.506-0.164-0.759-0.239c0.042-0.173,0.08-0.348,0.117-0.521c0.577-2.793,0.197-5.038-1.083-5.779c-1.233-0.708-3.244,0.028-5.278,1.8c-0.202,0.173-0.398,0.357-0.586,0.539c-0.127-0.122-0.258-0.244-0.389-0.361C9.492,1.851,7.355,1.054,6.075,1.8C4.847,2.513,4.481,4.627,4.997,7.27c0.052,0.263,0.108,0.52,0.173,0.782c-0.3,0.084-0.595,0.179-0.872,0.278C1.795,9.196,0,10.564,0,11.98C0,13.443,1.912,14.91,4.514,15.801L4.514,15.801z M10.889,19.62c-0.773,0.708-1.669,1.269-2.644,1.654c-0.52,0.248-1.12,0.273-1.655,0.061c-0.745-0.431-1.056-2.086-0.634-4.312c0.052-0.261,0.108-0.525,0.173-0.783c1.05,0.226,2.109,0.38,3.183,0.459c0.619,0.877,1.298,1.716,2.025,2.503c-0.15,0.145-0.3,0.286-0.45,0.417L10.889,19.62L10.889,19.62z M16.842,10.817c-0.22-0.412-0.445-0.824-0.68-1.227c-0.23-0.398-0.469-0.792-0.717-1.181c0.755,0.094,1.476,0.22,2.152,0.375C17.381,9.479,17.128,10.153,16.842,10.817L16.842,10.817z M16.851,13.151c0.3,0.681,0.563,1.369,0.792,2.077c-0.727,0.164-1.462,0.291-2.203,0.375c0.253-0.393,0.492-0.797,0.727-1.2C16.406,13.99,16.631,13.573,16.851,13.151L16.851,13.151z M16.309,11.985c-0.314,0.647-0.652,1.284-1.012,1.912c-0.356,0.623-0.736,1.228-1.134,1.828c-0.698,0.052-1.425,0.075-2.161,0.075c-0.736,0-1.448-0.023-2.137-0.066c-0.408-0.595-0.792-1.205-1.153-1.828s-0.694-1.256-1.008-1.902H7.702c0.309-0.647,0.647-1.28,1.003-1.903c0.356-0.622,0.741-1.228,1.144-1.823c0.703-0.052,1.42-0.08,2.152-0.08c0.732,0,1.453,0.028,2.152,0.08c0.398,0.591,0.778,1.194,1.139,1.814S15.99,11.344,16.309,11.985L16.309,11.985z M7.832,9.598c-0.23,0.398-0.455,0.806-0.666,1.218c-0.295-0.697-0.544-1.382-0.75-2.042c0.675-0.15,1.392-0.272,2.137-0.366C8.306,8.797,8.062,9.195,7.832,9.598L7.832,9.598z M7.167,13.188v0.001c0.216,0.412,0.436,0.82,0.67,1.223c0.239,0.408,0.483,0.816,0.741,1.214c-0.731-0.08-1.458-0.196-2.175-0.352C6.609,14.6,6.867,13.901,7.167,13.188L7.167,13.188z M12.038,18.481L12.038,18.481c-0.478-0.516-0.956-1.086-1.42-1.701c0.45,0.018,0.914,0.028,1.383,0.028c0.483,0,0.956-0.01,1.425-0.033C12.995,17.369,12.531,17.938,12.038,18.481L12.038,18.481z M18.165,19.888L18.165,19.888c-0.043,0.571-0.324,1.106-0.774,1.466c-0.745,0.431-2.334-0.131-4.05-1.602c-0.197-0.169-0.394-0.352-0.595-0.539c0.716-0.792,1.378-1.631,1.978-2.512c1.073-0.089,2.142-0.253,3.197-0.492c0.047,0.192,0.089,0.385,0.127,0.572C18.278,17.793,18.315,18.846,18.165,19.888L18.165,19.888z M18.572,9.032c0.244,0.069,0.478,0.145,0.703,0.22c2.184,0.75,3.717,1.866,3.717,2.719c0,0.919-1.636,2.104-3.975,2.878c-0.131,0.042-0.262,0.084-0.398,0.122c-0.328-1.022-0.731-2.021-1.195-2.991C17.874,11.024,18.254,10.039,18.572,9.032L18.572,9.032z M13.26,4.325L13.26,4.325c1.745-1.518,3.371-2.112,4.112-1.687c0.792,0.455,1.097,2.292,0.6,4.706c-0.033,0.158-0.066,0.314-0.108,0.469c-1.041-0.235-2.095-0.403-3.156-0.497C14.1,6.444,13.434,5.61,12.712,4.827C12.895,4.654,13.073,4.489,13.26,4.325L13.26,4.325z M12.01,5.545c0.492,0.534,0.956,1.097,1.387,1.677c-0.928-0.042-1.861-0.042-2.789,0C11.067,6.617,11.54,6.056,12.01,5.545L12.01,5.545z M6.572,2.672C7.36,2.213,9.108,2.868,10.95,4.5c0.116,0.103,0.234,0.216,0.356,0.327C10.579,5.61,9.909,6.444,9.295,7.316C8.236,7.41,7.186,7.574,6.145,7.803C6.084,7.565,6.033,7.321,5.981,7.077C5.54,4.808,5.831,3.098,6.572,2.672L6.572,2.672z M4.627,9.28c0.267-0.094,0.539-0.179,0.811-0.258c0.319,1.017,0.703,2.016,1.148,2.981c-0.45,0.979-0.839,1.991-1.162,3.022l-0.001,0.001c-0.197-0.056-0.389-0.117-0.58-0.182c-0.998-0.315-2.134-0.812-2.953-1.462c-0.473-0.328-0.792-0.834-0.881-1.402C1.008,11.122,2.489,10.026,4.627,9.28L4.627,9.28z"></path> <path fill="#DEDEDE" d="M10.618 16.78c.452.599.917 1.155 1.382 1.661v-1.633C11.532 16.808 11.067 16.798 10.618 16.78L10.618 16.78zM6.13 16.24c-.065.258-.121.522-.173.783-.422 2.227-.112 3.882.634 4.312.242.096.498.143.754.143.308 0 .616-.069.901-.204.975-.385 1.871-.946 2.644-1.654l-.001-.001c.15-.131.3-.272.45-.417-.726-.787-1.406-1.626-2.025-2.503C8.239 16.62 7.18 16.466 6.13 16.24L6.13 16.24zM7.167 13.188c-.3.713-.558 1.411-.764 2.086.717.155 1.444.272 2.175.352-.258-.397-.502-.806-.741-1.214-.234-.403-.453-.811-.67-1.223V13.188L7.167 13.188zM5.438 9.022C5.166 9.102 4.894 9.187 4.627 9.28c-2.138.745-3.619 1.842-3.619 2.699.089.568.407 1.074.881 1.402.82.65 1.955 1.147 2.953 1.462.192.066.384.127.58.182l.001-.001c.323-1.031.712-2.043 1.162-3.022C6.141 11.038 5.757 10.039 5.438 9.022L5.438 9.022zM8.554 8.408C7.809 8.502 7.092 8.624 6.417 8.774c.206.66.454 1.345.75 2.042.211-.412.435-.819.666-1.218C8.062 9.195 8.306 8.797 8.554 8.408L8.554 8.408zM12 8.198c-.732 0-1.448.028-2.151.08-.403.595-.788 1.201-1.144 1.823-.356.623-.694 1.256-1.003 1.903h.002c.314.646.647 1.279 1.008 1.902s.745 1.234 1.153 1.828c.688.043 1.4.066 2.135.066v-1.655l0 0c-1.186 0-2.147-.961-2.147-2.146 0-1.187.961-2.147 2.147-2.147l0 0V8.198L12 8.198zM12 5.555c-.466.508-.937 1.066-1.392 1.667C11.071 7.202 11.536 7.191 12 7.191V5.555L12 5.555zM7.183 2.529c-.24 0-.447.047-.611.143C5.831 3.098 5.54 4.808 5.981 7.077c.052.244.103.488.164.726 1.041-.229 2.091-.393 3.15-.487.614-.872 1.284-1.706 2.011-2.489C11.184 4.716 11.067 4.603 10.95 4.5 9.493 3.209 8.094 2.529 7.183 2.529L7.183 2.529z"></path> <path fill="#48A8C1" d="M12,9.852c-1.186,0-2.147,0.961-2.147,2.147c0,1.185,0.961,2.146,2.147,2.146l0,0V9.852L12,9.852L12,9.852z"></path> <path fill="#48A8C1" d="M7.344,21.479c-0.256,0-0.512-0.047-0.754-0.143c-0.745-0.431-1.056-2.086-0.634-4.312c0.052-0.261,0.108-0.525,0.173-0.783c1.05,0.226,2.109,0.38,3.183,0.459c0.619,0.877,1.298,1.716,2.025,2.503c-0.15,0.145-0.3,0.286-0.45,0.417l0.001,0.001c-0.773,0.708-1.669,1.269-2.644,1.654C7.961,21.41,7.653,21.479,7.344,21.479L7.344,21.479z M8.578,15.626c-0.731-0.08-1.458-0.196-2.175-0.352c0.205-0.675,0.464-1.373,0.764-2.086v0.001c0.216,0.412,0.436,0.82,0.67,1.223C8.076,14.82,8.32,15.228,8.578,15.626L8.578,15.626z M5.423,15.026c-0.197-0.056-0.389-0.117-0.58-0.182c-0.998-0.315-2.134-0.812-2.953-1.462c-0.473-0.328-0.792-0.834-0.881-1.402c0-0.857,1.481-1.954,3.619-2.699c0.267-0.094,0.539-0.179,0.811-0.258c0.319,1.017,0.703,2.016,1.148,2.981c-0.45,0.979-0.839,1.991-1.162,3.022L5.423,15.026L5.423,15.026z M7.167,10.816c-0.295-0.697-0.544-1.382-0.75-2.042c0.675-0.15,1.392-0.272,2.137-0.366c-0.248,0.388-0.492,0.787-0.722,1.19C7.602,9.997,7.377,10.404,7.167,10.816L7.167,10.816z M6.145,7.803C6.084,7.565,6.033,7.321,5.981,7.077C5.54,4.808,5.831,3.098,6.572,2.672c0.164-0.096,0.371-0.143,0.611-0.143c0.911,0,2.309,0.68,3.767,1.971c0.116,0.103,0.234,0.216,0.356,0.327C10.579,5.61,9.909,6.444,9.295,7.316C8.236,7.41,7.186,7.574,6.145,7.803L6.145,7.803z M7.187,1.523c-0.416,0-0.79,0.09-1.111,0.277C4.847,2.513,4.481,4.627,4.997,7.27c0.052,0.263,0.108,0.52,0.173,0.782c-0.3,0.084-0.595,0.179-0.872,0.278C1.795,9.196,0,10.564,0,11.98l0,0c0,1.463,1.912,2.93,4.514,3.82c0.211,0.069,0.422,0.141,0.638,0.201c-0.07,0.281-0.131,0.559-0.188,0.845c-0.491,2.602-0.108,4.663,1.12,5.371c0.324,0.187,0.705,0.277,1.127,0.277c1.226,0,2.798-0.761,4.34-2.111c0.149-0.132,0.3-0.27,0.45-0.414v-1.53c-0.465-0.506-0.93-1.062-1.382-1.661c0.449,0.018,0.914,0.028,1.382,0.028v-1.007c-0.735,0-1.446-0.024-2.135-0.066c-0.408-0.595-0.792-1.205-1.153-1.828s-0.694-1.256-1.008-1.902H7.702c0.309-0.647,0.647-1.28,1.003-1.903c0.356-0.622,0.741-1.228,1.144-1.823c0.703-0.052,1.419-0.08,2.151-0.08V7.191c-0.464,0-0.929,0.01-1.392,0.031C11.064,6.621,11.534,6.063,12,5.555V4.092c-0.123-0.118-0.249-0.235-0.375-0.348C10.027,2.326,8.427,1.523,7.187,1.523L7.187,1.523z"></path> </svg>                </div>
                 <div className="tool-name">
                   <h1>react js</h1>
-                  <h5>javascript library</h5>
                 </div>
               </div>
 
@@ -227,7 +260,6 @@ function App() {
                 </div>
                 <div className="tool-name">
                   <h1>expres js</h1>
-                  <h5>javascript framework</h5>
                 </div>
               </div>
 
@@ -237,7 +269,6 @@ function App() {
                 </div>
                 <div className="tool-name">
                   <h1>html5</h1>
-                  <h5>markup language</h5>
                 </div>
               </div>
 
@@ -248,7 +279,6 @@ function App() {
                 </div>
                 <div className="tool-name">
                   <h1>post man</h1>
-                  <h5>api tester</h5>
                 </div>
               </div>
 
@@ -257,7 +287,6 @@ function App() {
                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="npm"> <polygon fill="#C53735" points="12 9.964 10.666 9.964 10.666 12.679 12 12.679 12 9.964"></polygon> <path fill="#C53735" d="M24,7.25H0v8.143h6.666v1.357H12v-1.357h12V7.25L24,7.25z M6.666,14.036H5.333V9.964H4v4.072H1.333V8.608h5.333V14.036L6.666,14.036z M13.333,14.036h-2.667v1.356H8V8.608h5.333V14.036L13.333,14.036z M22.667,14.036h-1.333V9.964H20v4.072h-1.333V9.964h-1.333v4.072h-2.667V8.608h8V14.036L22.667,14.036z"></path> <polygon fill="#DEDEDE" points="4 11.29 1.333 11.29 1.333 14.036 4 14.036 4 11.29"></polygon> <polygon fill="#DEDEDE" points="6.666 11.29 5.333 11.29 5.333 14.036 6.666 14.036 6.666 11.29"></polygon> <polygon fill="#DEDEDE" points="13.333 11.29 12 11.29 12 12.679 10.666 12.679 10.666 11.29 8 11.29 8 15.393 10.666 15.393 10.666 14.036 13.333 14.036 13.333 11.29"></polygon> <polygon fill="#DEDEDE" points="17.334 11.29 14.667 11.29 14.667 14.036 17.334 14.036 17.334 11.29"></polygon> <polygon fill="#DEDEDE" points="20 11.29 18.667 11.29 18.667 14.036 20 14.036 20 11.29"></polygon> <polygon fill="#DEDEDE" points="22.667 11.29 21.334 11.29 21.334 14.036 22.667 14.036 22.667 11.29"></polygon> <polygon fill="#AC302E" points="12 11.29 10.666 11.29 10.666 12.679 12 12.679 12 11.29"></polygon> <polygon fill="#AC302E" points="24 11.29 22.667 11.29 22.667 14.036 21.334 14.036 21.334 11.29 20 11.29 20 14.036 18.667 14.036 18.667 11.29 17.334 11.29 17.334 14.036 14.667 14.036 14.667 11.29 13.333 11.29 13.333 14.036 10.666 14.036 10.666 15.393 8 15.393 8 11.29 6.666 11.29 6.666 14.036 5.333 14.036 5.333 11.29 4 11.29 4 14.036 1.333 14.036 1.333 11.29 0 11.29 0 15.393 6.666 15.393 6.666 16.75 12 16.75 12 15.393 24 15.393 24 11.29"></polygon> </svg>                </div>
                 <div className="tool-name">
                   <h1>npm</h1>
-                  <h5>managing JavaScript packages</h5>
                 </div>
               </div>
 
@@ -266,7 +295,6 @@ function App() {
                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="node-js"> <path fill="#8CC03E" d="M9.413,21.027c-0.615,0.356-0.732,0.4-1.311,0.604c-0.14,0.048-0.352,0.133,0.081,0.381l2.899,1.738c0.276,0.163,0.597,0.248,0.911,0.248L11.995,24c0.32,0,0.634-0.086,0.912-0.248l8.682-5.076c0.563-0.334,0.911-0.948,0.911-1.606V6.922c0-0.662-0.347-1.276-0.911-1.604l-8.682-5.082c-0.546-0.313-1.274-0.313-1.824,0L2.411,5.313C1.848,5.642,1.5,6.26,1.5,6.917v10.149c0,0.662,0.347,1.276,0.911,1.604l2.275,1.329c1.101,0.552,1.495,0.552,1.997,0.552c1.631,0,2.571-1,2.571-2.743V7.785c0-0.143-0.117-0.252-0.254-0.252H7.901c-0.142,0-0.254,0.109-0.254,0.252v10.018c0,0.776-0.79,1.543-2.082,0.891l-2.379-1.39C3.103,17.262,3.05,17.166,3.05,17.07V6.922c0-0.098,0.053-0.194,0.136-0.242l8.672-5.077h0.267l8.677,5.072c0.084,0.052,0.136,0.142,0.136,0.242V17.07c0,0.095-0.051,0.19-0.131,0.237l-8.682,5.077h-0.267L9.63,21.047L9.413,21.027L9.413,21.027z"></path> <path fill="#7AA736" d="M9.413,21.027c-0.615,0.356-0.732,0.4-1.311,0.604c-0.14,0.048-0.352,0.133,0.081,0.381l2.899,1.738c0.276,0.163,0.597,0.248,0.911,0.248L11.995,24c0.002,0,0.003,0,0.005,0v-1.615h-0.142L9.63,21.047L9.413,21.027L9.413,21.027z M11.997,0c-0.319,0-0.639,0.078-0.914,0.235L2.411,5.313C1.848,5.642,1.5,6.26,1.5,6.917v10.149c0,0.662,0.347,1.276,0.911,1.604l2.275,1.329c1.101,0.552,1.495,0.552,1.997,0.552c1.631,0,2.571-1,2.571-2.743V7.785c0-0.143-0.117-0.252-0.254-0.252H7.901c-0.142,0-0.254,0.109-0.254,0.252v10.018c0,0.571-0.427,1.137-1.167,1.137c-0.266,0-0.573-0.073-0.915-0.246l-2.379-1.39C3.103,17.262,3.05,17.166,3.05,17.07V6.922c0-0.098,0.053-0.194,0.136-0.242l8.672-5.077H12V0C11.999,0,11.998,0,11.997,0L11.997,0z"></path> <path fill="#8CC03E" d="M14.674,15.47c-2.299,0-2.802-0.587-2.97-1.744c-0.019-0.124-0.123-0.214-0.249-0.214h-1.123c-0.142,0-0.249,0.113-0.249,0.252c0,1.482,0.795,3.248,4.597,3.248c2.744-0.006,4.325-1.105,4.325-3.02l-0.003,0.001c0-1.9-1.269-2.404-3.935-2.763c-2.698-0.361-2.97-0.547-2.97-1.186c0-0.528,0.231-1.233,2.229-1.233c1.781,0,2.44,0.391,2.712,1.609c0.023,0.115,0.128,0.2,0.245,0.2h1.128l0.184-0.081l0.065-0.195c-0.173-2.1-1.551-3.076-4.333-3.076c-2.476,0-3.953,1.058-3.953,2.834c0,1.924,1.471,2.457,3.845,2.694c2.844,0.282,3.064,0.706,3.064,1.273C17.283,15.051,16.503,15.47,14.674,15.47L14.674,15.47z"></path> <path fill="#7AA736" d="M11.455,13.512h-1.123c-0.142,0-0.249,0.113-0.249,0.252c0,1.464,0.776,3.206,4.461,3.247v-1.542c-2.188-0.022-2.675-0.609-2.84-1.744C11.685,13.601,11.581,13.512,11.455,13.512L11.455,13.512z M14.327,7.269c-2.476,0-3.953,1.058-3.953,2.834c0,1.924,1.471,2.457,3.845,2.694c0.112,0.011,0.221,0.022,0.325,0.034v-1.673c-2.211-0.317-2.446-0.519-2.446-1.113c0-0.528,0.231-1.233,2.229-1.233c0.075,0,0.147,0.001,0.218,0.002V7.271C14.473,7.269,14.4,7.269,14.327,7.269L14.327,7.269z"></path> </svg>                </div>
                 <div className="tool-name">
                   <h1>node js</h1>
-                  <h5>runtime environment</h5>
                 </div>
               </div>
 
@@ -276,31 +304,44 @@ function App() {
                 </div>
                 <div className="tool-name">
                   <h1>mongodb</h1>
-                  <h5>database</h5>
                 </div>
               </div>
             </div>
-            <div className="title-container" style={{marginTop:"130px"}}>
-              <h1 className='title'>LET'S WORK</h1>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
+            <div className="title-container contact" style={{marginTop:"130px"}}>
+              <h1 className='title' id='contact'>LET'S WORK</h1>
               <h1 className='title overlay' style={{left:"17.5%"}}>TOGETHER</h1>
             </div>
+            </motion.div>
             <div className="form-div">
-              <label htmlFor="">
+            <motion.div initial={{ opacity: 0, rotateY: 90 }} whileInView={{ opacity: 1, rotateY: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
+              <label htmlFor="" >
                 name
-                <input type="text" placeholder='your name'/>
+                <input type="text" placeholder='your name'style={{marginLeft:"10px"}}/>
               </label>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, rotateY: 90 }} whileInView={{ opacity: 1, rotateY: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} >
               <label htmlFor="">
                 email
                 <input type="text" placeholder='your email'/>
               </label>
+            </motion.div>
+            {/* <motion.div initial={{ opacity: 0, rotateY: 90 }} whileInView={{ opacity: 1, rotateY: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} > */}
               <label htmlFor="" style={{width:"100%"}}>
-                email
+                company
                 <input type="text" placeholder='your email'/>
               </label>
+            {/* </motion.div> */}
+            {/* <motion.div initial={{ opacity: 0, rotateY: 90 }} whileInView={{ opacity: 1, rotateY: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} > */}
               <label htmlFor="" style={{width:"100%",height:"80px"}}>
-                email
+                message
                 <textarea name="" placeholder='message' id=""style={{height:"80px"}}></textarea>
               </label>
+              {/* </motion.div> */}
+              {/* <motion.div initial={{ opacity: 0, rotateY: 90 }} whileInView={{ opacity: 1, rotateY: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: false, amount: 0.3 }} > */}
+              <button>confirm</button>
+              {/* </motion.div> */}
             </div>
             <div className="empty-div">
 
@@ -311,10 +352,10 @@ function App() {
           </div>
         </div>
       </div>
-    </main>
-    <footer>
+    {/* <footer>
       <p>thank you for visiting my portfolio</p>
-    </footer>
+    </footer> */}
+    </main>
 
 
 
